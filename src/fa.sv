@@ -14,8 +14,12 @@ module fa_module
 
     xor u0(i0, A, B);
 
+    xor u5(S, u0, Cin);
+
     and u2(i1, A, B);
 
-    or u4(Cout, i1, i2);
+    and u1(i2, u0, Cin);
+
+    or u4(Cout, u1, u2);
 
 endmodule: fa_module
